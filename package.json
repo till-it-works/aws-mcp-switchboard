@@ -1,0 +1,58 @@
+{
+  "name": "aws-mcp-switchboard",
+  "version": "0.4.11",
+  "description": "One remote MCP connector for every AWS account and role you reach through IAM Identity Center.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/till-it-works/aws-mcp-switchboard.git"
+  },
+  "homepage": "https://github.com/till-it-works/aws-mcp-switchboard#readme",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc --noEmit",
+    "test": "vitest run",
+    "lint": "eslint .",
+    "deploy": "cdk deploy -c reservedConcurrency=${RESERVED_CONCURRENCY:-20}",
+    "breaker:reset": "tsx scripts/breaker-reset.ts"
+  },
+  "dependencies": {
+    "@aws-crypto/sha256-js": "^5.2.0",
+    "@aws-sdk/client-cloudformation": "^3.1175.0",
+    "@aws-sdk/client-kms": "^3.1174.0",
+    "@aws-sdk/client-lambda": "^3.1175.0",
+    "@aws-sdk/client-ssm": "^3.1175.0",
+    "@aws-sdk/client-sso": "^3.1174.0",
+    "@aws-sdk/client-sso-oidc": "^3.1174.0",
+    "@aws-sdk/client-sts": "^3.1174.0",
+    "@smithy/signature-v4": "^5.7.5"
+  },
+  "devDependencies": {
+    "@aws-sdk/credential-providers": "^3.1174.0",
+    "@eslint/js": "^10.0.1",
+    "@types/aws-lambda": "^8.10.164",
+    "@types/node": "^26.6.6",
+    "aws-cdk": "^2.1149.0",
+    "aws-cdk-lib": "^2.278.0",
+    "aws-sdk-client-mock": "^4.1.0",
+    "constructs": "^10.8.1",
+    "esbuild": "^0.28.2",
+    "eslint": "^10.15.0",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.73.0",
+    "vitest": "^5.1.1"
+  },
+  "exports": {
+    ".": "./cdk/lib/index.ts"
+  },
+  "peerDependencies": {
+    "aws-cdk-lib": "^2.278.0",
+    "constructs": "^10.8.1",
+    "esbuild": "^0.28.2"
+  }
+}

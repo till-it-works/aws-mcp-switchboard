@@ -1,0 +1,12 @@
+AWS MCP Switchboard
+Copyright 2026 till-it-works (https://till-it-works.de)
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+The till-it-works branding (lambda/branding.ts: "also by till-it-works" line,
+Imprint/DPA links) is on by default and may be removed: deploy with
+branding: false (CDK) / BRANDING=off, or delete it in your fork.
+
+Bundled fonts (lambda/fonts.ts): Space Grotesk, Plus Jakarta Sans and
+JetBrains Mono, licensed under the SIL Open Font License 1.1; copyright
+notices and license text in licenses/OFL-1.1-fonts.txt.

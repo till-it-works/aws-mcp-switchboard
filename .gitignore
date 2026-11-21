@@ -1,0 +1,11 @@
+node_modules/
+cdk.out/
+dist/
+.env
+*.log
+.e2e/
+.spike/
+.vitest/
+.playwright-mcp/
+cdk.context.json
+.DS_Store
